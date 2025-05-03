@@ -20,7 +20,7 @@
                         <label class="form-label">To Do App</label>
                         <input type="text" class="form-control" id="todotask" name="description" required>
                     </div>
-                    <button type="submit" class="btn btn-success">Add to Task</button>
+                    <button type="submit" class="btn btn-success">Add Task</button>
                 </form>
             </div>
         </div>
@@ -46,8 +46,8 @@
                             <th scope="row">{{ forloop.counter }}</th>
                             <td>{{ todotask.description }} </td>
                             <td>{{ todotask.completed }}</td>
-                            <td><a href="/mark_complete/{{todotask.id}}" class="form-check-input" id="mark_complete" name="mark_complete">
-                                Mark Complete
+                            <td><a href="/mark_complete/{{todotask.id}}" class="btn btn-outline-secondary" id="mark_complete" name="mark_complete">
+                                Mark completed
                             </a></td>
                         </tr>
                         {% endif %}
@@ -81,7 +81,7 @@
                             <th scope="row">{{ forloop.counter }}</th>
                             <td>{{ todotask.description }} </td>
                             <td>{{ todotask.completed }}</td>
-                            <td><a href="/mark_complete/{{todotask.id}}" class="form-check-input" id="mark_complete" name="mark_complete">
+                            <td><a href="/mark_complete/{{todotask.id}}" class="btn btn-outline-success" id="mark_complete" name="mark_complete">
                                 Mark Incomplete
                             </a></td>
                         </tr>
